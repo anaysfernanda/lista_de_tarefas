@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskList - Cadastro</title>
+    <link rel="icon" type="image/png" href="assets/images/task.svg" />
+    <link rel="stylesheet" type="text/css" href="assets/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/d953ddf065.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="d-flex flex-column justify-content-center align-items-center">
+    <div class="container-fluid p-5 d-flex justify-content-center">
+      <div class="row backPage rounded-4">
+        <div
+          class="col-12 col-sm-5 img-login d-flex align-items-center justify-content-center"
+        >
+          <img
+            class="login-img"
+            src="/assets/images/task1.jpg"
+            alt="computador-tablet-smartphone"
+          />
+        </div>
+        <div
+          class="divRight col-12 col-sm-7 d-flex flex-column align-items-center justify-content-center mt-4"
+        >
+          <h1 class="typing-animation title text-center fw-semibold mt-2">
+            Bem vindo (a) ao TaskList
+          </h1>
+          <form class="form mt-4" id="form-cadastro">
+            <h1 class="title-login fs-3 mb-3 text-center">Cadastro</h1>
+            <div id="container-alert-account"></div>
+            <div id="msg-error-regist" class="rounded-3 text-center"></div>
+            <div class="form-floating w-100 mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="input-cad-email"
+                name="input-cad-email"
+                placeholder="name@example.com"
+                value=""
+                required
+              />
+              <label id="label-email" for="input-cad-email"
+                >Digite seu e-mail</label
+              >
+            </div>
+            <div class="form-floating w-100 mb-3">
+              <input
+                type="password"
+                class="form-control"
+                id="input-cad-password"
+                name="input-cad-password"
+                placeholder="Password"
+                value=""
+              />
+              <i class="fa-solid fa-eye" id="i-eye"></i>
+              <i class="fa-solid fa-eye-slash" id="i-eye3"></i>
+
+              <label id="label-password" for="input-cad-password"
+                >Digite sua senha</label
+              >
+            </div>
+            <div class="form-floating w-100">
+              <input
+                type="password"
+                class="form-control"
+                id="input-confirm"
+                name="input-confirm"
+                placeholder="Password"
+                value=""
+                required
+              />
+              <i class="fa-solid fa-eye" id="i-eye2"></i>
+              <i class="fa-solid fa-eye-slash" id="i-eye4"></i>
+
+              <label id="label-password" for="input-confirm"
+                >Repita a senha</label
+              >
+            </div>
+            <div class="w-100 d-flex flex-column align-items-center">
+              <input
+                type="submit"
+                class="button btn-account btn rounded-3 ps-4 pe-5 py-2 my-4 border-0"
+                id="button-cad-login"
+                value="CADASTRE-SE"
+              />
+              <i id="arrow2" class="fa-solid fa-arrow-right"></i>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/assets/js/registration.js"></script>
+  </body>
+</html>
