@@ -69,6 +69,7 @@ function validation() {
   );
   return userExist;
 }
+
 formLogin.addEventListener("submit", doLogin);
 function doLogin(e) {
   e.preventDefault();
@@ -78,26 +79,27 @@ function doLogin(e) {
     window.location.href = "./tasks.html";
   }
 }
-let estado = -1;
+
+let estado = 0;
 buttonLogin.addEventListener("mouseenter", () => {
   const userExist = validation();
   if (userExist) {
     return;
   }
   estado++;
-  if (estado === 0) {
+  if (estado === 1) {
     buttonLogin.style.transform = "translate(7em)";
   }
-  if (estado === 1) {
+  if (estado === 2) {
     buttonLogin.style.transform = "translate(-7em)";
-    estado = -1;
+    estado = 0;
   }
   msgError.setAttribute("style", "display: block");
   msgError.innerHTML =
     "<p class='p-2'>Dados inválidos! Preencha senha e/ou e-mail corretos. Se ainda não tem cadastro, cadastre-se abaixo.</p>";
-  setTimeout(() => {
-    msgError.setAttribute("style", "display: none");
-  }, 6000);
+  // setTimeout(() => {
+  //   msgError.setAttribute("style", "display: none");
+  // }, 6000);
   userEmail.classList.add("is-invalid");
   userPassword.classList.add("is-invalid");
   userEmail.value = "";
