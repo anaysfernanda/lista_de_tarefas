@@ -97,9 +97,6 @@ buttonLogin.addEventListener("mouseenter", () => {
   msgError.setAttribute("style", "display: block");
   msgError.innerHTML =
     "<p class='p-2'>Dados inválidos! Preencha senha e/ou e-mail corretos. Se ainda não tem cadastro, cadastre-se abaixo.</p>";
-  // setTimeout(() => {
-  //   msgError.setAttribute("style", "display: none");
-  // }, 6000);
   userEmail.classList.add("is-invalid");
   userPassword.classList.add("is-invalid");
   userEmail.value = "";
